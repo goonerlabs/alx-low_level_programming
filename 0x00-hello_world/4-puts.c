@@ -2,7 +2,7 @@
 
 /**
  * main - prints phrase to standard output
- * it Return: 0 if succesful and another number otherwise
+ * Return: 0 if succesful and another number otherwise
  */
 
 int main(void)
