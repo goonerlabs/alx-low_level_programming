@@ -11,7 +11,7 @@ int main(void)
 	int b = 1;
 	long int c = 1000;
 	long long int d = 10000;
-	float e = 3.142
+	float e = 3.142;
 
 	printf("Size of a char: %d byte(s)\n", (int) sizeof(a));
 	printf("Size of a int: %d byte(s)\n", (int) sizeof(b));
