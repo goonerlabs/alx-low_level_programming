@@ -21,7 +21,7 @@ int main(void)
 			}
 			putchar((char) i);
 			putchar((char) j);
-			if ( i+j != 113)
+			if (i + j != 113)
 			{
 				putchar(',');
 				putchar(' ');
