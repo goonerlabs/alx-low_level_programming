@@ -38,8 +38,8 @@ void times_table(void)
 				_putchar('0' + (k % 10));
 			}
 			j++;
-			_putchar('\n');
 		}
+		_putchar('\n');
 		i++;
 	}
 }
