@@ -49,7 +49,8 @@ void print_times_table(int n)
 }
 
 /**
- * print_single_digits - prints singles
+ * print_single_digits - helper function
+ * Description: prints single digits
  * @x: parameter of type int
  * Return: void
  */
@@ -63,7 +64,8 @@ void print_single_digits(int x)
 }
 
 /**
- * print_tens - prints double digits
+ * print_tens - helper function
+ * Description: prints double digits
  * @x: parameter of type int
  * Return: void
  */
@@ -76,7 +78,8 @@ void print_tens(int x)
 }
 
 /**
- * print_hundreds - prints double digits
+ * print_hundreds - helper function
+ * Description: prints tripple digits 
  * @x: parameter of type int
  * Return: void
  */
