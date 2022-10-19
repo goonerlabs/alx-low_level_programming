@@ -6,6 +6,10 @@
  * @n: parameter of type int
  * Return: void
  */
+void print_single_digits(int x);
+void print_tens(int x);
+void print_hundreds(int x);
+
 void print_times_table(int n)
 {
 	int i, j, k;
@@ -28,30 +32,57 @@ void print_times_table(int n)
 
 			else if ((j != 0) && k < 10)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar('0' + k);
+				print_single_digits(k);
 			}
 
 			else if (k >= 10 && k < 100)
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar('0' + (k / 10));
-				_putchar('0' + (k % 10));
+				print_tens(k);
 			}
 			else
 			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar('0' + (k / 100));
-				_putchar('0' + ((k / 10) % 10));
-				_putchar('0' + (k % 10));
+				print_hundreds(k);
 			}
 		}
 		_putchar('\n');
 	}
+}
+
+/**
+ * print_single_digits - prints singles
+ * @x: parameter of type int
+ * Return: void
+ */
+void print_single_digits(int x)
+{
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar('0' + x);
+}
+
+/**
+ * print_tens - prints double digits
+ * @x: parameter of type int
+ * Return: void
+ */
+void print_tens(int x)
+{
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar('0' + x);
+}
+
+/**
+ * print_hundreds - prints double digits
+ * @x: parameter of type int
+ * Return: void
+ */
+void print_hundreds(int x)
+{
+	_putchar(',');
+	_putchar(' ');
+	_putchar('0' + x);
 }
