@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-int fibonacci(int n);
-
 /**
  * main - entry point
  * Description: prints the first 50 fibonacci numbers
@@ -9,33 +7,28 @@ int fibonacci(int n);
  */
 int main(void)
 {
-	int i, tmp;
+	long int j, k, l;
+	int i;
 
-	for (i = 1; i <= 50; i++)
+	j = 1;
+	k = 2;
+	l = 3;
+
+	printf("%ld, %ld, ", j, k);
+	for (i = 3; i <= 50; i++)
 	{
-		tmp = fibonacci(i);
-		printf("%d", tmp);
-		printf(",");
-		printf(" ");
+		if (i == 50)
+		{
+			printf("%ld", l);
+		}
+		else
+		{
+			printf("%ld, ", l);
+		}
+		j = k;
+		k = l;
+		l = j + k;
 	}
 	printf("\n");
 	return (0);
-}
-
-/**
- * fibonacci- prints number
- * Description: prints a  fibonacci number
- * @n: type int. input number
- * Return: fibonacci number of given input
- */
-int fibonacci(int n)
-{
-	if (n == 2 || n == 1)
-	{
-		return (1);
-	}
-	else
-	{
-		return ((fibonacci(n - 1) + fibonacci(n - 2)));
-	}
 }
