@@ -2,7 +2,7 @@
 
 /**
  * main - entry point
- * Description: prints the sum of first 28 even fibonacci numbers
+ * Description: prints the sum of even fibonacci numbers < 400000
  * Return: 0 if succesful
  */
 int main(void)
@@ -16,8 +16,12 @@ int main(void)
 	l = 3;
 	res = 2;
 
-	for (i = 3; i <= 28; i++)
+	for (i = 3; ; i++)
 	{
+		if (l >= 4000000)
+		{
+			break;
+		}
 		if (l % 2 == 0)
 		{
 			res += l;
