@@ -51,41 +51,44 @@ void print_times_table(int n)
 /**
  * print_single_digits - helper function
  * Description: prints single digits
- * @x: parameter of type int
+ * @n: parameter of type int
  * Return: void
  */
-void print_single_digits(int x)
+void print_single_digits(int n)
 {
 	_putchar(',');
 	_putchar(' ');
 	_putchar(' ');
 	_putchar(' ');
-	_putchar('0' + x);
+	_putchar('0' + n);
 }
 
 /**
  * print_tens - helper function
  * Description: prints double digits
- * @x: parameter of type int
+ * @n: parameter of type int
  * Return: void
  */
-void print_tens(int x)
+void print_tens(int n)
 {
 	_putchar(',');
 	_putchar(' ');
 	_putchar(' ');
-	_putchar('0' + x);
+	_putchar('0' + (n /10));
+	_putchar('0' + (n % 10));
 }
 
 /**
  * print_hundreds - helper function
  * Description: prints tripple digits 
- * @x: parameter of type int
+ * @n: parameter of type int
  * Return: void
  */
-void print_hundreds(int x)
+void print_hundreds(int n)
 {
 	_putchar(',');
 	_putchar(' ');
-	_putchar('0' + x);
+	_putchar('0' + (n / 100));
+	_putchar('0' + ((n / 10) % 10));
+	_putchar('0' + (n % 10));
 }
