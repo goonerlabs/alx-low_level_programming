@@ -1,15 +1,14 @@
 #include "main.h"
 
+void print_single_digits(int x);
+void print_tens(int x);
+void print_hundreds(int x);
 /**
  * print_times_table - prints the times table
  * Description: prints the nth times table
  * @n: parameter of type int
  * Return: void
  */
-void print_single_digits(int x);
-void print_tens(int x);
-void print_hundreds(int x);
-
 void print_times_table(int n)
 {
 	int i, j, k;
@@ -74,13 +73,13 @@ void print_tens(int n)
 	_putchar(',');
 	_putchar(' ');
 	_putchar(' ');
-	_putchar('0' + (n /10));
+	_putchar('0' + (n / 10));
 	_putchar('0' + (n % 10));
 }
 
 /**
  * print_hundreds - helper function
- * Description: prints tripple digits 
+ * Description: prints tripple digits
  * @n: parameter of type int
  * Return: void
  */
