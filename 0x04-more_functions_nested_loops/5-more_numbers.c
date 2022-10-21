@@ -11,9 +11,16 @@ void more_numbers(void)
 
 	for (j = 0; j < 10; j++)
 	{
-		for (i = 48; i < 58; i++)
+		for (i = 0; i < 15; i++)
 		{
-			_putchar(i);
+			if (i > 9)
+			{
+				_putchar('0' + i);
+			}
+			else 
+			{
+				_putchar('0' + i);
+			}
 		}
 		_putchar('\n');
 	}
