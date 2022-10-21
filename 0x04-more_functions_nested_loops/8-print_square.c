@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_squares - prints #
+ * print_square - prints #
  * Description: prints n lines of length n
  * @n: determines how long and how many the lines would be
  * Return: void
  */
-void print_squares(int n)
+void print_square(int n)
 {
 	int i, j;
 
