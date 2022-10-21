@@ -16,7 +16,7 @@ int print_sign(int n);
 
 int _abs(int);
 
-int print_line(int n);
+void print_line(int n);
 
 void more_numbers(void);
 
