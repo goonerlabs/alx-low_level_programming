@@ -5,7 +5,7 @@
  * Description: prints all single digits
  * Return: void
  */
-void print_alphabet(void)
+void print_numbers(void)
 {
 	int i;
 
