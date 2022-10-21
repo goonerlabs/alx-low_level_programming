@@ -1,14 +1,13 @@
 #include <stdio.h>
-#include <string.h>
 
 /**
- * main - entry point
+ * main - function
  * Description: prints fizz, buzz, fizzbuzz
  * or a number between 1 & 100 depending on
  * what multiple of 15 i is
- * Return: void
+ * Return: 0 if succesful
  */
-void main(void)
+int main(void)
 {
 	int i;
 	char fizz[] = "Fizz";
@@ -35,4 +34,5 @@ void main(void)
 		}
 	}
 	printf("\n");
+	return (0);
 }
