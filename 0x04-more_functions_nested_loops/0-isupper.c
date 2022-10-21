@@ -7,7 +7,7 @@
  * expects argument of type char
  * Return: 1 if true and 0 otherwise
  */
-int _islower(int c)
+int _isupper(int c)
 {
 	return ((c >= 'A' && c <= 'Z') ? 1 : 0);
 }
