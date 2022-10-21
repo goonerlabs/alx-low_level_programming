@@ -6,7 +6,7 @@
  * @y: parameter of type int
  * Return: x * y
  */
-int add(int x, int y)
+int mul(int x, int y)
 {
 	return (x * y);
 }
