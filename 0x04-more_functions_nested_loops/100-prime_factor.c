@@ -29,7 +29,7 @@ long int get_largest_prime(long long int n)
 {
 	int i, j;
 
-	max = -1;
+	j = -1;
 
 	while (n % 2 == 0)
 	{
