@@ -62,7 +62,7 @@ float _sqrt(float n)
 {
 	float i;
 
-	for ( i = 0.01; i * i < n; i = i + 0.01);
+	for (i = 0.01; i * i < n; i = i + 0.01);
 
 	return (i);
 }
