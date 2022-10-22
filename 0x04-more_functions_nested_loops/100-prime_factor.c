@@ -4,9 +4,9 @@
 long int get_largest_prime(long long int n);
 
 /**
- * main - entry point function 
+ * main - entry point function
  * Description: prints the largets prime factor of 612852475143
- * Return: 0 if succesful 
+ * Return: 0 if succesful
  */
 int main(void)
 {
@@ -20,15 +20,14 @@ int main(void)
 }
 
 /**
- * get_largest_prime - returns prime number 
+ * get_largest_prime - returns prime number
  * Description: rturns the largest prime number of a given input
  * @n: input of type long long integer
- * Return: the largest prime number 
- */ 
+ * Return: the largest prime number
+ */
 long int get_largest_prime(long long int n)
 {
 	int i, j;
-	double k;
 
 	j = -1;
 
@@ -38,9 +37,7 @@ long int get_largest_prime(long long int n)
 		n /= 2;
 	}
 
-	k = n ** 0.5;
-
-	for (i = 3; i <= k; i = i + 2)
+	for (i = 3; i <= sqrt(n); i = i + 2)
 	{
 		while (n % i == 0)
 		{
@@ -49,10 +46,9 @@ long int get_largest_prime(long long int n)
 		}
 	}
 
-	if (n > 2) 
+	if (n > 2)
 	{
 		j = n;
 	}
-	return j;
+	return (j);
 }
-
