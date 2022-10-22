@@ -28,6 +28,7 @@ int main(void)
 long int get_largest_prime(long long int n)
 {
 	int i, j;
+	double k;
 
 	j = -1;
 
@@ -37,7 +38,9 @@ long int get_largest_prime(long long int n)
 		n /= 2;
 	}
 
-	for (i = 3; i <= sqrt(n); i = i + 2)
+	k = n ** 0.5;
+
+	for (i = 3; i <= k; i = i + 2)
 	{
 		while (n % i == 0)
 		{
