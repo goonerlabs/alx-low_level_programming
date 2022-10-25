@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 /**
  * puts2 - prints every other character string to stdout
  *
@@ -12,7 +12,7 @@ void puts2(char *str)
 
 	i = 0;
 
-	while (str[i] != '\0')
+	while (i < strlen(str))
 	{
 		_putchar(str[i]);
 		i = i + 2;
