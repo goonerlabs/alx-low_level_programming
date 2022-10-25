@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * print_array - prints the first n numbers of an array
@@ -10,9 +11,10 @@
  */
 void print_array(int *a, int n)
 {
-	int i;
+	int i, n;
 
 	i = 0;
+	n = strlen(a);
 
 	while (i < n)
 	{
