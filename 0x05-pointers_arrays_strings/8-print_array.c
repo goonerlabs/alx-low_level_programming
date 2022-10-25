@@ -11,10 +11,9 @@
  */
 void print_array(int *a, int n)
 {
-	int i, n;
+	int i;
 
 	i = 0;
-	n = strlen(a);
 
 	while (i < n)
 	{
@@ -28,5 +27,5 @@ void print_array(int *a, int n)
 		}
 		i++;
 	}
-	_putchar('\n');
+	printf("\n");
 }
