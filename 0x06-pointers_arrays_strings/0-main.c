@@ -7,7 +7,7 @@ int main(void)
 	char s2[] = "world!\n";
 	char *ptr;
 
-	ptr = _strcat(s1, s2);
+	ptr = _strncat(s1, s2, 5);
 	printf("%s", ptr);
 	return(0);
 }
