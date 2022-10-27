@@ -19,10 +19,10 @@ char *_strcat(char *dest, char *src)
 		i++;
 	}
 
-	for (j = 0; j < (strlen(src); j++)
+	for (j = 0; j < (int) strlen(src); j++)
 	{
-		dest[i] = src[j]
+		dest[i] = src[j];
 	}
 
-	return (dest)
+	return (dest);
 }
