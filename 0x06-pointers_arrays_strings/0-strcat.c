@@ -2,18 +2,18 @@
 #include <string.h>
 
 /**
- * _strcat - concatenates two strings 
+ * _strcat - concatenates two strings
  *
- * @dest: destination string 
- * @src: source string 
- * Return: mutated destination string 
+ * @dest: destination string
+ * @src: source string
+ * Return: mutated destination string
  */
 char *_strcat(char *dest, char *src)
 {
 	int i, j;
 
-	int i = 0; 
-	
+	int i = 0;
+
 	while (dest[i] != '\0')
 	{
 		i++;
