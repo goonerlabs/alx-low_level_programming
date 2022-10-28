@@ -23,9 +23,9 @@ char *cap_string(char *str)
 			for (j = 0; j < (int) strlen(skip); j++)
 				if (str[i] == skip[j])
 				{
-					if (str[1 + i] >= 'a' && str[1 + i] <= 'z')
+					if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
 					{
-						str[1 + i] = str[1 + i] - 32;
+						str[i + 1] = str[i + 1] - 32;
 					}
 				}
 		}
