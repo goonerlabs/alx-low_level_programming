@@ -12,15 +12,17 @@ char *cap_string(char *str)
 
 	int i, j;
 
-	char skip[] = " \t\n,;.!?\"(){}";
+	char skip[] = {' ', '\t', '\n', ',', ';', '.',
 
-	for (i = 0; str[i] != '\0'; i++)
+				'!', '?', '"', '(', ')', '{', '}'};
+
+	for (i = 0; i < (int) strlen(str); i++)
 	{
 		if (i == 0 && str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] = str[i] - 32;
 
-			for (j = 0; skip[j] != '\0'; j++)
+			for (j = 0; j < (sizeof(skip) / sizeof(skip[1])); j++)
 			{
 				if (str[i] == skip[j])
 				{
