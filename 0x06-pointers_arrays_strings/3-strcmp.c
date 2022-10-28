@@ -9,7 +9,7 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i, n;
+	int i, n, c1, c2;
 
 	for (i = 0; ; i++)
 	{
@@ -17,8 +17,6 @@ int _strcmp(char *s1, char *s2)
 		{
 			return (0);
 		}
-	
-		int c1, c2;
 
 		c1 = (int) s1[i];
 		c2 = (int) s2[i];
