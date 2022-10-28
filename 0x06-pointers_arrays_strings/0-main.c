@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	int *ptr;
+	int ptr;
 
 	ptr = _strcmp("Hello", "Hello");
 	printf("%d", ptr);
