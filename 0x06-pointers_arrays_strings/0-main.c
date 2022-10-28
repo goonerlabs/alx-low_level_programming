@@ -5,7 +5,7 @@ int main(void)
 {
 	int ptr;
 
-	ptr = _strcmp("Hello", "Hello");
-	printf("%d", ptr);
+	ptr = _strcmp("Hello", "World");
+	printf("%d\n", ptr);
 	return(0);
 }
