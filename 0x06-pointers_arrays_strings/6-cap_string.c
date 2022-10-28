@@ -19,7 +19,10 @@ char *cap_string(char *str)
 			str[i] = str[i] - 32;
 			continue;
 		}
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == ',' || str[i] == ';'|| str[i] == '.' || str[i] == '!' || str[i] == '?' || str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
+		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == ','
+				|| str[i] == ';' || str[i] == '.' || str[i] == '!' || str[i] == '?'
+				|| str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{'
+				|| str[i] == '}')
 		{
 			++i;
 			if (str[i] >= 'a' && str[i] <= 'z')
@@ -28,7 +31,7 @@ char *cap_string(char *str)
 				continue;
 			}
 		}
-		else 
+		else
 		{
 			if (str[i] >= 'A' && str[i] <= 'Z')
 			{
