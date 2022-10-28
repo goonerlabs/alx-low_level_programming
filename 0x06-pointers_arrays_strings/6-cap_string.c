@@ -22,7 +22,7 @@ char *cap_string(char *str)
 		{
 			str[i] = str[i] - 32;
 
-			for (j = 0; j < (sizeof(skip) / sizeof(skip[1])); j++)
+			for (j = 0; j < (int) (sizeof(skip) / sizeof(skip[1])); j++)
 			{
 				if (str[i] == skip[j])
 				{
