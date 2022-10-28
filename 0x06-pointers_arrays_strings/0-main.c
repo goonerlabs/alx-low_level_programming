@@ -3,11 +3,9 @@
 
 int main(void)
 {
-	char s1[98] = "Hello ";
-	char s2[] = "world!\n";
-	char *ptr;
+	int *ptr;
 
-	ptr = _strncat(s1, s2, 5);
-	printf("%s", ptr);
+	ptr = _strcmp("Hello", "Hello");
+	printf("%d", ptr);
 	return(0);
 }
