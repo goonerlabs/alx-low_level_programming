@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stddef.h>
 /**
- * _strpbrk - returns the first occurence of 
- * of a a character in a string 
+ * _strpbrk - returns the first occurence of
+ * of a a character in a string
  * @s: string to check
  * @accept: reference string
  * Return: the first occurence of any byte in accept
- * or NULL if there is no ocurrence 
+ * or NULL if there is no ocurrence
  */
 char *_strpbrk(char *s, char *accept)
 {
