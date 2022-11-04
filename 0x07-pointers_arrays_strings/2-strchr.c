@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strchr - returns a pointer to the first
@@ -20,4 +21,5 @@ char *_strchr(char *s, char c)
 		{
 			return (NULL);
 		}
+	}
 }
