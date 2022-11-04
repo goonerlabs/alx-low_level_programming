@@ -24,18 +24,14 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[i] == accept[j])
 			{
 				found = 1;
-				break;
-			}
-			if (!found)
-			{
-				break;
-			}
-			else
-			{
 				n++;
+			}
+			if (found == 0)
+			{
+				return (f);
 			}
 		}
 
 	}
-	return (n);
+	return (0);
 }
