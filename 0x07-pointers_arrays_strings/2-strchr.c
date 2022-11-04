@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strchr - returns a pointer to the first 
+ * _strchr - returns a pointer to the first
  * occurence of a character in a string
  * @s: the string to check
  * @c: the character to check for
@@ -18,7 +18,7 @@ char *_strchr(char *s, char c)
 	{
 		return (s);
 	}
-	else 
+	else
 	{
 		return (NULL);
 	}
