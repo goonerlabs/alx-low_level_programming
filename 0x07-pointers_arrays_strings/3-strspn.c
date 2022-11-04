@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdbool.h>
 /**
  * _strspn - returns the number of bytes
  * from a matching string
@@ -9,29 +9,27 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, n;
+	int i, j, n;
+	bool found;
 
 	n = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		int  found;
-
-		found = 0;
+		found = false;
 
 		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (s[i] == accept[j])
 			{
-				found = 1;
+				found = true;
 				n++;
 			}
-			if (found == 0)
-			{
-				return (n);
-			}
 		}
-
+		if (!found)
+		{
+			return (n);
+		}
 	}
 	return (0);
 }
