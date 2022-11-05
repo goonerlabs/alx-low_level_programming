@@ -12,11 +12,11 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	static char* ptr;
+	static char *ptr;
 
-	ptr = haystack; 
+	ptr = haystack;
 
-	while (*ptr) 
+	while (*ptr)
 	{
 		if (strncmp(ptr, needle, strlen(needle)) == 0)
 		{
