@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stddef.h>
+#include <string.h>
+
 /**
  * _strstr - finds the first occurence of a substring
  * in a string
@@ -10,26 +12,17 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, flag;
+	static char* ptr;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	ptr = haystack; 
+
+	while (*ptr) 
 	{
-		if (haystack[i] == needle[0])
+		if (strncmp(ptr, needle, strlen(needle)) == 0)
 		{
-			flag = 0;
-			for (j = 0; needle[j] != '\0'; j++)
-			{
-				if (haystack[i + j] != needle[j])
-				{
-					flag = 1;
-					break;
-				}
-			}
-			if (flag == 0)
-			{
-				return (&haystack[i]);
-			}
+			return (ptr);
 		}
+		ptr++;
 	}
 	return (NULL);
 }
