@@ -15,10 +15,10 @@ int main(void)
 
 {
 	char *s = "hello, world";
-	char *f = "oleh";
-	unsigned int n;
-	n = _strspn(s, f);
+	char *f = "world";
+	char *t;
+	t = _strstr(s, f);
 
-	printf("%u\n", n);
+	printf("%s\n", t);
 	return (0);
 }
