@@ -39,11 +39,11 @@ int _sqrt(int n, int min, int max)
 	}
 	else if (guess_squared < n)
 	{
-		_sqrt(n, guess + 1, max);
+		return _sqrt(n, guess + 1, max);
 	}
 	else
 	{
-		_sqrt(n, min, guess -1);
+		return _sqrt(n, min, guess -1);
 	}
 }
 
