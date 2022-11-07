@@ -10,11 +10,11 @@ int _is_palindrome(char *s, int l, int r);
 
 int is_palindrome(char *s)
 {
-	return (_is_palindrome(s, 1, strlen(s) - 1));
+	return (_is_palindrome(s, 1, strlen(s)));
 }
 
 /**
- * _is_palindrome - helper function to 
+ * _is_palindrome - helper function to
  * recursively check if s is a palindrome
  * @s: string to check
  * @l: left index iterator
