@@ -43,7 +43,7 @@ int _sqrt(int n, int min, int max)
 	}
 	else
 	{
-		_sqrt(n, min, guess -1)
+		_sqrt(n, min, guess -1);
 	}
 }
 
