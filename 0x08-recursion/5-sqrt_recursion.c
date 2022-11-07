@@ -36,7 +36,7 @@ int _sqrt(int n, int min, int max)
 	{
 		return (guess);
 	}
-	else if (guess_squared < n)
+	else if ((guess * guess) < n)
 	{
 		return (_sqrt(n, guess + 1, max));
 	}
