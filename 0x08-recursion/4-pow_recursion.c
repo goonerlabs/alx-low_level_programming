@@ -1,0 +1,24 @@
+#include "main.h"
+
+/**
+ * _pow_recursion - returns x ** y
+ * @x: base
+ * @y: power
+ * Return: x**y or -1 if y is negative
+ */
+int _pow_recursion(int n)
+{
+	if (y < 0)
+	{
+		return (-1);
+	}
+	else if (y == 0)
+	{
+		return (1);
+	}
+	else
+	{
+		return (x * _pow_recursion(x, y - 1));
+	}
+
+}
