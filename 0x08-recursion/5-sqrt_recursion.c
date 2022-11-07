@@ -28,15 +28,15 @@ int _sqrt_recursion(int n)
  */
 int _sqrt(int n, int min, int max)
 {
-	int guess;
+	long int guess;
 
 	guess = (min + max) / 2;
 
-	if ((guess * guess) == n)
+	if ((guess * guess) == (long int) n)
 	{
-		return (guess);
+		return ( (int) guess);
 	}
-	else if ((guess * guess) < n)
+	else if ((guess * guess) < (long int) n)
 	{
 		return (_sqrt(n, guess + 1, max));
 	}
