@@ -2,7 +2,7 @@
 
 int _is_prime(int n, int i);
 /**
- * is_prime_number - checks if a number is a prime number 
+ * is_prime_number - checks if a number is a prime number
  * @n: integer input to check
  * Return: 1 if n is a prime number and 0 otherwise
  */
@@ -13,7 +13,7 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	else 
+	else
 	{
 		return (_is_prime(n, n - 1));
 	}
@@ -21,7 +21,7 @@ int is_prime_number(int n)
 
 /**
  * _is_prime - checks if a number is a prime number
- * @n: integer to check 
+ * @n: integer to check
  * @i: divisor
  * Return: 1 if n is prime and 0 otherwise
  */
@@ -35,7 +35,7 @@ int _is_prime(int n, int i)
 	{
 		return (0);
 	}
-	else 
+	else
 	{
 		return (_is_prime(n, i - 1));
 	}
