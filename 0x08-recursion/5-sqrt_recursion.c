@@ -1,14 +1,13 @@
 #include "main.h"
 
+int _sqrt(int n, int min, int max);
+
 /**
- * _sqrt_recursion - returns the swuare root of n
+ * _sqrt_recursion - returns the square root of n
  * @n: integer input
- * @min: min guess
- * @max: max guess
  * Return: square root of n  or -1 if n is negative
  */
 
-int _sqrt(int n, int min, int max);
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
