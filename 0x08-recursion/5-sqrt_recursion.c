@@ -12,9 +12,9 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	else 
+	else
 	{
-		return (_sqrt(n, 1, n));
+		return (_sqrt(n, 0, n));
 	}
 
 }
@@ -28,22 +28,21 @@ int _sqrt_recursion(int n)
  */
 int _sqrt(int n, int min, int max)
 {
-	int guess, guess_squared;
+	int guess;
 
 	guess = (min + max) / 2;
-	guess_squared = guess * guess;
 
-	if (guess_squared == n) 
+	if ((guess * guess) == n)
 	{
 		return (guess);
 	}
 	else if (guess_squared < n)
 	{
-		return _sqrt(n, guess + 1, max);
+		return (_sqrt(n, guess + 1, max));
 	}
 	else
 	{
-		return _sqrt(n, min, guess -1);
+		return (_sqrt(n, min, guess - 1));
 	}
 }
 
