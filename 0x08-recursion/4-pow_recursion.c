@@ -6,7 +6,7 @@
  * @y: power
  * Return: x**y or -1 if y is negative
  */
-int _pow_recursion(int n)
+int _pow_recursion(int x, int y)
 {
 	if (y < 0)
 	{
