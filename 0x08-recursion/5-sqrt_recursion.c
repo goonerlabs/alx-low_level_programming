@@ -3,8 +3,11 @@
 /**
  * _sqrt_recursion - returns the swuare root of n
  * @n: integer input
+ * @min: min guess
+ * @max: max guess
  * Return: square root of n  or -1 if n is negative
  */
+
 int _sqrt(int n, int min, int max);
 int _sqrt_recursion(int n)
 {
@@ -34,7 +37,7 @@ int _sqrt(int n, int min, int max)
 
 	if ((guess * guess) == (long int) n)
 	{
-		return ( (int) guess);
+		return ((int) guess);
 	}
 	else if ((guess * guess) < (long int) n)
 	{
