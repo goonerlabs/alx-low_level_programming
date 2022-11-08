@@ -4,26 +4,30 @@
 
 int _putchar(char c);
 
-void reset_to_98(int *n);
+void print_numbers(void);
 
-void swap_int(int *a, int *b);
+void print_most_numbers(void);
 
-int _strlen(char *s);
+int _isupper(int c);
 
-void _puts(char *str);
+int _isdigit(int c);
 
-void print_rev(char *s);
+int print_sign(int n);
 
-void rev_string(char *s);
+int _abs(int);
 
-void puts2(char *str);
+void print_line(int n);
 
-void puts_half(char *str);
+void more_numbers(void);
 
-void print_array(int *a, int n);
+void print_diagonal(int n);
 
-char *_strcpy(char *dest, char *src);
+int mul(int, int);
 
-int _atoi(char *s);
+void print_square(int n);
+
+void print_triangle(int n);
+
+void print_number(int n);
 
 #endif
