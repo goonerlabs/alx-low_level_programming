@@ -8,7 +8,7 @@
  * @argv: the argument vector
  * Return: 0 if succesful 1 otherwise
  */
-int main(int argc, char **argv __attribute((unused)))
+int main(int argc, char **argv __attribute__((unused)))
 {
 	printf("%d\n", argc);
 	return (0);
