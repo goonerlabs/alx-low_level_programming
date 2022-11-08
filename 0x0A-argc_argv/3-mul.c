@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - prints the multiplication of
@@ -12,7 +13,7 @@ int main(int argc, char **argv)
 {
 	int res;
 
-	if (agrc != 3)
+	if (argc != 3)
 	{
 		return (1);
 	}
