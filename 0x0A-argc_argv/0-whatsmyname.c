@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - prints the name of the program 
+ * main - prints the name of the program
  * @argc: the argument count
  * @argv: the argument vector
  * Return: 0 if succesful 1 otherwise
