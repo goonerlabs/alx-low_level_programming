@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 /**
  * main - prints the sum of
@@ -17,7 +16,7 @@ int main(int argc, char **argv)
 	if (argc < 2)
 	{
 		printf("%d\n", 0);
-		return (1);
+		return (0);
 	}
 
 	for (i = 1; i < argc; i++)
