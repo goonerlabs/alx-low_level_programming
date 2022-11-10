@@ -11,14 +11,14 @@
 char *_strdup(char *str)
 {
 	char *ptr;
-	long unsigned int i;
+	unsigned long int i;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	
-	ptr = (char *) malloc(strlen(str) * sizeof(char));
+
+	ptr = (char *) malloc(strlen(str) + 1 * sizeof(char));
 
 	if (ptr == NULL)
 	{
