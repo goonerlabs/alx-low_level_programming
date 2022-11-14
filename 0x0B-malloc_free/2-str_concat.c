@@ -16,7 +16,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int n, k;
 
 	i = 0;
-	k = 0;
+	j = 0;
 
 	n = s1 ? strlen(s1) : 0;
 	k = s2 ? strlen(s2) : 0;
