@@ -4,7 +4,7 @@
 /**
  * array_range - creates and array
  * and fills it from min to max
- * @min - starting number in the array
+ * @min: starting number in the array
  * @max: the ending number of the array
  * Return: a poter to the array or null on fail
  */
@@ -20,16 +20,17 @@ int *array_range(int min, int max)
 
 	j = max - min + 1;
 
-	ptr = malloc(j * sizeof(int));
+	ptr = malloc(sizeof(int) * j);
 
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; min <= max; i++)
+	for (i = 0; i < j; i++)
 	{
-		ptr[i] = min++;
+		ptr[i] = min;
+		min++;
 	}
 	return (ptr);
 }
