@@ -7,7 +7,7 @@
  * @n: the argument count
  * Return: void
  */
-int sum_them_all(const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list list;
