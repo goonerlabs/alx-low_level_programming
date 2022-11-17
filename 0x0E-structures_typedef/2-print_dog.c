@@ -13,7 +13,7 @@ void print_dog(struct dog *d)
 
 	if (d == NULL)
 	{
-		exit(1);
+		return;
 	}
 
 	d->name = (d->name == NULL) ? "(nil)" : d->name;
