@@ -3,14 +3,14 @@
 
 /**
  * main - prints its own op codes
- * @argc: the argument count 
- * @argv: the argument vector 
+ * @argc: the argument count
+ * @argv: the argument vector
  * Return: 0 is succesful
  */
-int main( int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int i, bytes;
-	char *arr; 
+	char *arr;
 
 	if (argc != 2)
 	{
@@ -30,7 +30,7 @@ int main( int argc, char **argv)
 
 	for (i = 0; i < bytes; i++)
 	{
-		if ( i == bytes - 1)
+		if (i == bytes - 1)
 		{
 			printf("%02hhx\n", arr[i]);
 			break;
