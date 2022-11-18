@@ -7,7 +7,7 @@
  * @argv: the rgument vector
  * Return: 0 on success
  */
-int main(int argc, char *argv)
+int main(int argc, char **argv)
 {
 	int a, b, res;
 	char op;
@@ -30,7 +30,7 @@ int main(int argc, char *argv)
 		exit(99);
 	}
 
-	op = argv[2];
+	op = *argv[2];
 
 	if ((op == '/' || op == '%') && b == 0)
 	{
