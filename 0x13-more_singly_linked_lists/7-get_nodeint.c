@@ -2,7 +2,7 @@
 /**
  * get_nodeint_at_index - returns the node at index
  * of a linked list
- * @head - a pointer to the head node
+ * @head: a pointer to the head node
  * @index: the index to check
  * Return: the node at the index or NULL
  */
