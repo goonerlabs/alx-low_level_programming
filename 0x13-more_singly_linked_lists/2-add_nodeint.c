@@ -4,10 +4,10 @@
  * beginning of a linked list
  *
  * @head: a pointer to the head node
- * @n: the integer to insert
- * Return: a pointer to the new node or Null
+ * @n: the data to insert
+ * Return: a pointer to the new node
  */
-list_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_node(list_t **head, const int n)
 {
 	listint_t *new_node;
 
@@ -19,9 +19,9 @@ list_t *add_nodeint(listint_t **head, const int n)
 	}
 
 	new_node->n = n;
-	new_node->next = (*head);
-	(*head) = new_node;
+	new_node->next = *head;
+	*head = new_node;
 
-	return (*head);
+	return (new_node);
 }
 
