@@ -6,19 +6,19 @@
  * @head: a pointer to the head node
  * Return: the sum of the data or 0
  */
-size_t print_listint(const listint_t *h)
+int sum_listint(listint_t *head)
 {
-	size_t len;
+	int res;
 
-	len = 0;
+	res = 0;
 
-	while (h)
+
+	while (head)
 	{
-		printf("%d\n", h->n);
+		res += head->next;
 
-		h = h->next;
-		len++;
+		head = head->next;
 	}
-	return (len);
+	return (res);
 }
 
