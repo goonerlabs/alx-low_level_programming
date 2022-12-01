@@ -7,7 +7,7 @@
  * @n: the data to insert
  * Return: a pointer to the new node
  */
-listint_t *add_node(list_t **head, const int n)
+listint_t *add_nodeint(list_t **head, const int n)
 {
 	listint_t *new_node;
 
