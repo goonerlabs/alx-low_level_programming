@@ -1,19 +1,18 @@
 #include "lists.h"
-#include <string.h>
 /**
- * add_node_end - adds a new node to the
+ * add_nodeint_end - adds a new node to the
  * end of a linked list
  *
  * @head: a pointer to the head node
- * @str: string value to be held by node
- * Return: the address of the head node
+ * @n: the data to insert
+ * Return: a pointer to the new node or NUll
  */
-list_t *add_node_end(list_t **head, const char *str)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	list_t *new_node;
 	list_t *last;
 
-	new_node = (list_t *) malloc(sizeof(list_t));
+	new_node = malloc(sizeof(listint_t));
 
 	if (!new_node)
 	{
@@ -22,8 +21,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	last = *head;
 
-	new_node->str = strdup(str);
-	new_node->len = strlen(str);
+	new_node->n = n;
 	new_node->next = NULL;
 
 	if (*head == NULL)
