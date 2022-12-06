@@ -29,7 +29,7 @@ unsiged int binary_to_int(const char *b)
 	}
 
 	result = 0;
-	power = 1;
+	exp = 1;
 
 	for (i = (len - 1); i >= 0; i--)
 	{
