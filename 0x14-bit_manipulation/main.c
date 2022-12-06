@@ -1,0 +1,11 @@
+#include "main.h"
+#include <stdio.h>
+
+int main (void)
+{
+	unsigned int n;
+
+	n = binary_to_uint("00001");
+	printf("%u\n", n);
+	return (0);
+}

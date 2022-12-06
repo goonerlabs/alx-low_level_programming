@@ -8,7 +8,7 @@
  * Return: the decimal number or 0 if there is a character 
  * that cannot the converted
  */
-unsigned int binary_to_int(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	unsigned int result, exp;
 	int i, len;
