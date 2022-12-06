@@ -31,9 +31,9 @@ unsigned int binary_to_uint(const char *b)
 	result = 0;
 	exp = 1;
 
-	for (j = (len - 1); j >= 0; i--, exp *= 2)
+	for (j = (len - 1); j >= 0; j--, exp *= 2)
 	{
-		if (b[i] == '1')
+		if (b[j] == '1')
 		{
 			result += exp;
 		}
