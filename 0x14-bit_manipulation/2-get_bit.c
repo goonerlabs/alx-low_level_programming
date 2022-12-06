@@ -6,7 +6,7 @@
  * @index: the index of the bit to get
  * Return: the bit found or -1 if error
  */
-get_bit(unsigned long int n, unsigned int index)
+int get_bit(unsigned long int n, unsigned int index)
 {
 	int res;
 
