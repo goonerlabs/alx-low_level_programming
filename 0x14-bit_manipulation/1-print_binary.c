@@ -22,6 +22,6 @@ void print_binary(unsigned long int n)
 
 	for (; shifts >= 0; shifts--)
 	{
-		printf("%c", ((n >> shifts) & 1) ? '1' : '0')
+		printf("%c", ((n >> shifts) & 1) ? '1' : '0');
 	}
 }
