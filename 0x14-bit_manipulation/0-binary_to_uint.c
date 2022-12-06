@@ -31,14 +31,13 @@ unsigned int binary_to_uint(const char *b)
 	result = 0;
 	exp = 1;
 
-	for (i = (len - 1); i >= 0; i--)
+	for (i = (len - 1); i >= 0; i--, exp *= 2)
 	{
 		if (b[i] == '1')
 		{
 			result += exp;
 		}
 
-		exp *= 2;
 	}
 
 	return (result);
