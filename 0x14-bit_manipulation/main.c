@@ -5,7 +5,7 @@ int main (void)
 {
 	unsigned int n;
 
-	n = binary_to_uint("00001");
+	n = binary_to_uint("1100010");
 	printf("%u\n", n);
 	return (0);
 }
