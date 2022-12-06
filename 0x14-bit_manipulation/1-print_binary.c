@@ -7,12 +7,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	int mask;
+	unsigned long int temp;
+	int shifts;
 
-	mask = 128;
-
-	for (; mask != 0; mask >>= 1)
+	if (n == 0)
 	{
-		printf("%c", n & mask ? '1' : '0');
+		printf("0");
+		return;
+	}
+
+	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
+	{
+	}
+
+	for (; shifts >= 0; shifts--)
+	{
+		printf("%c", ((n >> shifts) & 1) ? '1' : '0')
 	}
 }
