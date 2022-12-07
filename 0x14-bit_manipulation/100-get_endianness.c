@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * get_endianness - checks the endianess of a number 
+ * get_endianness - checks the endianess of a number
  *
- * Returns: 0 if big endian and 1 otherwise
+ * Return: 0 if big endian and 1 otherwise
  */
 int get_endianness(void)
 {
@@ -17,7 +17,7 @@ int get_endianness(void)
 	{
 		return (1);
 	}
-	else 
+	else
 	{
 		return (0);
 	}
