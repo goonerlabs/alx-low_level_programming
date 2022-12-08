@@ -65,7 +65,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		dfprintf(STDERR_FILENO,
+		dprintf(STDERR_FILENO,
 				"Usage: cp source_file_name destination_file_name\n");
 		exit(97);
 	}
