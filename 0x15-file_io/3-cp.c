@@ -67,7 +67,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO,
-				"Usage: cp source_file_name destination_file_name\n");
+				"Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -89,7 +89,7 @@ int main(int argc, char **argv)
 		if (dest == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Can't write to file %s\n",
+					"Error: Can't write to %s\n",
 					argv[2]);
 			free(buffer);
 			exit(99);
