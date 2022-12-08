@@ -40,7 +40,7 @@ void close_file(int fd)
 	if (c == 1)
 	{
 		dprintf(STDERR_FILENO,
-				"Error: Can't close fd %d\n", 
+				"Error: Can't close fd %d\n",
 				fd);
 		exit(100);
 	}
@@ -52,11 +52,12 @@ void close_file(int fd)
  * @argv: an array of pointers to arguments fed to main
  *
  * Return: 0 (success)
- * 
- * Description: exit code 97 (argument count is incorrect)
- * 							exit code 98 (the source file cannot be read or doesn't exist
- * 							exit code 99 (destination file cannot be created or written to)
- * 							exit code 100 (either file cannot be closed)
+ *
+ * Description:
+ * exit code 97 (argument count is incorrect)
+ * exit code 98 (the source file cannot be read or doesn't exist
+ * exit code 99 (destination file cannot be created or written to)
+ * exit code 100 (either file cannot be closed)
  */
 int main(int argc, char **argv)
 {
@@ -96,7 +97,7 @@ int main(int argc, char **argv)
 
 		r = read(src, buffer, 1024);
 		dest = open(argv[2], O_WRONLY | O_APPEND);
-	} while(r > 0);
+	} while (r > 0);
 
 	free(buffer);
 	close_file(src);
