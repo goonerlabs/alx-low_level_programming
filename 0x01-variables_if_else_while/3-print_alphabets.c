@@ -15,16 +15,20 @@ int main(void)
 	c = 'a';
 	n = 'A';
 
-	while (c <= 'z' && n <= 'Z')
+	while (c <= 'z')
 	{
 		putchar(c);
-		putchar(n);
 		c++;
-
 	}
 
+	while (n <= 'Z')
+	{
+		putchar(n);
+		n++;
+	}
+	
 	putchar('\n');
-
+	
 	return (0);
 }
 
