@@ -2,6 +2,13 @@
 
 int main(void)
 {
-	print_alphabet_x10();
+	int i, j;
+
+	i = -5;
+
+	j =  i * -1;
+
+	printf("%d\n", j);
+
 	return (0);
 }
