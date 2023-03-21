@@ -16,7 +16,9 @@ int main(void)
 
 	k = 2;
 
-	while (j < 4000000)
+	sum = 0;
+
+	while (j <= 4000000)
 	{
 		if (j % 2 == 0)
 		{
