@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	unsigned long int i, j, k, temp, sum;
+	unsigned long int j, k, temp, sum;
 
 	j = 1;
 
