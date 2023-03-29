@@ -23,8 +23,10 @@ int main(void)
 		if ((j + i) > 2772)
 			break;
 		j += i;
-		printf("%c", i);
+
+		if (i)
+			printf("%c", i);
 	}
-	printf("\n");
+	printf("%c\n", (2772 - j));
 	return (0);
 }
