@@ -1,42 +1,42 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
 
 /**
- * infinite_add - adds two numbers
+ * infinite_add - add two numbers
  * @n1: first number
  * @n2: second number
- * @r: pointer to the result
- * @size_r: size of the result
+ * @r: result
+ * @size_r: size of result
  *
- * Return: pointer to the result
+ * Return: pointer to result
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, k, carry, sum;
+	int i = 0, j = 0, carry = 0;
+	int sum = 0;
 
-	i = strlen(n1) - 1;
-	j = strlen(n2) - 1;
-	k = 0;
-	carry = 0;
-	sum = 0;
-
-
-	if (strlen(n1) + strlen(n2) >= (unsigned long) size_r)
-		return (0);
-
-	while (i >= 0 || j >= 0 || carry > 0)
+	while (n1[i] != '\0' || n2[j] != '\0')
 	{
-		sum = carry;
-		if (i >= 0)
-			sum += n1[i--] - '0';
-
-		if (j >= 0)
-			sum += n2[j--] - '0';
-
-		r[k++] = (sum % 10) + '0';
-		carry = sum / 10;
+		sum = n1[i] - '0' + n2[j] - '0' + carry;
+		if (sum > 9)
+		{
+			carry = 1;
+			sum -= 10;
+		}
+		else
+		{
+			carry = 0;
+		}
+		r[i + j] = sum + '0';
+		i++;
+		j++;
 	}
-	r[k] = '\0';
+	if (carry == 1)
+	{
+		r[i + j] = '1';
+		i++;
+		j++;
+	}
+	r[i + j] = '\0';
 	return (r);
 }
