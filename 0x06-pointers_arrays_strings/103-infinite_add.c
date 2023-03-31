@@ -22,7 +22,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	sum = 0;
 
 
-	if (strlen(n1) + strlen(n2) >= (long unsigned int) size_r)
+	if (strlen(n1) + strlen(n2) >= (unsigned long) size_r)
 		return (0);
 
 	while (i >= 0 || j >= 0 || carry > 0)
