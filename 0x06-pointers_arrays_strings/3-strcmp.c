@@ -4,7 +4,8 @@
  * _strcmp - compares two strings
  * @s1: first string
  * @s2: second string
- * Return: 0 if strings are equal, less than 0 if s1 < s2, greater than 0 if s1 > s2
+ * Return: 0 if strings are equal, less than 0 if s1 < s2, 
+ * greater than 0 if s1 > s2
  */
 
 char *_strcmp(char *s1, char *s2)
