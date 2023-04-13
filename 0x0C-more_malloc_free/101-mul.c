@@ -5,6 +5,24 @@
 #include <ctype.h>
 
 #define ERROR_MSG "Error\n"
+/**
+ * _isdigit - checks if a string contains a non-digit char
+ * @s: string to be evaluated
+ *
+ * Return: 0 if a non-digit is found, 1 otherwise
+ */
+int _isdigit(char *s)
+{
+	int i = 0;
+
+	while (s[i])
+	{
+		if (s[i] < '0' || s[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
+}
 
 /**
  * error_exit - prints error message and exits
@@ -21,6 +39,7 @@ void error_exit(void)
  * @argc: argument count
  * @argv: argument vector
  * Return: 0
+ *
  */
 
 int main(int argc, char *argv[])
@@ -32,12 +51,10 @@ int main(int argc, char *argv[])
 		error_exit();
 	num1 = argv[1], num2 = argv[2];
 	len1 = strlen(num1), len2 = strlen(num2);
-	if (!isdigit(*num1) || !isdigit(*num2))
+	if (!_isdigit(num1) || !_isdigit(num2))
 		error_exit();
 	len = len1 + len2 + 1;
 	result = malloc(sizeof(int) * len);
-	if (result == NULL)
-		error_exit();
 	for (i = 0; i <= len1 + len2; i++)
 		result[i] = 0;
 	for (len1 = len1 - 1; len1 >= 0; len1--)
