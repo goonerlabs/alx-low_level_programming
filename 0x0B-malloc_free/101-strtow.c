@@ -1,87 +1,78 @@
-#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-
-char **split(char *string, char *seperators);
+#include "main.h"
 
 /**
- * strtow - split a string into words
- * @str: string to split
+ * count - count the number of words in a string
+ * @s: string to evaluate
  *
- * Return: pointer to array of strings
+ * Return: number of words
  */
-
-char **strtow(char *str)
+int count(char *s)
 {
-	char *sep;
+	int check, c, w;
 
-	sep = " \t\n\r\f\v";
-	return (split(str, sep));
+	check = 0;
+	w = 0;
+
+	for (c = 0; s[c] != '\0'; c++)
+	{
+		if (s[c] == ' ')
+			check = 0;
+		else if (check == 0)
+		{
+			check = 1;
+			w++;
+		}
+	}
+
+	return (w);
 }
 
 /**
- * split - split a string into words
- * @string: string to split
- * @seperators: string of seperators
+ * **strtow - splits a string into words
+ * @str: string to split
  *
- * Return: pointer to array of strings
+ * Return: pointer to an array of strings (Success)
+ * or NULL (Error)
  */
-
-char **split(char *string, char *seperators)
+char **strtow(char *str)
 {
-	int i, j, len, old_i, string_index, to_allocate, count;
-	char **strings;
-	char buffer[16384];
+	char **array_2d, *temp;
+	int i, k = 0, len = 0, words, c = 0, start_index, end_index;
 
-	len = strlen(string);
-	count = 0;
-	i = 0;
-	while (i < len)
+	while (*(str + len))
+		len++;
+	words = count(str);
+	if (words == 0)
+		return (NULL);
+
+	array_2d = (char **) malloc(sizeof(char *) * (words + 1));
+	if (array_2d == NULL)
+		return (NULL);
+
+	for (i = 0; i <= len; i++)
 	{
-		while (i < len)
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			if (strchr(seperators, string[i]) == NULL)
-				break;
-			i++;
+			if (c)
+			{
+				end_index = i;
+				temp = (char *) malloc(sizeof(char) * (c + 1));
+				if (temp == NULL)
+					return (NULL);
+				while (start_index < end_index)
+					*temp++ = str[start_index++];
+				*temp = '\0';
+				array_2d[k] = temp - c;
+				k++;
+				c = 0;
+			}
 		}
-		old_i = i;
-		while (i < len)
-		{
-			if (strchr(seperators, string[i]) != NULL)
-				break;
-			i++;
-		}
-		if (i > old_i)
-			count++;
+		else if (c++ == 0)
+			start_index = i;
 	}
-		strings = malloc(sizeof(char *) * count);
-		i = 0;
-		string_index = 0;
-		while (i < len)
-		{
-			while (i < len)
-			{
-				if (strchr(seperators, string[i]) == NULL)
-					break;
-				i++;
-			}
-			j = 0;
-			while (i < len)
-			{
-				if (strchr(seperators, string[i]) != NULL)
-					break;
-				buffer[j] = string[i];
-				i++;
-				j++;
-			}
-			if (j > 0)
-			{
-				buffer[j] = '\0';
-				to_allocate = sizeof(char) * (strlen(buffer) + 1);
-				strings[string_index] = malloc(to_allocate);
-				strcpy(strings[string_index], buffer);
-				string_index++;
-			}
-		}
-		return (strings);
+
+	array_2d[k] = NULL;
+
+	return (array_2d);
 }
