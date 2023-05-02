@@ -1,48 +1,46 @@
 #include "lists.h"
 /**
- * uniq_nodes - checks if a list has a cycle
+ * list_cycle_len - checks if a list has a cycle
  * @head: head of the list
  * Return: number of unique nodes if it has a cycle, 0 otherwise
  */
 
-unsigned int uniq_nodes(const listint_t *head)
+unsigned int list_cycle_len(const listint_t *head)
 {
 	const listint_t *fast, *slow;
-	unsigned int count, has_loop;
+	unsigned int count;
 
-	has_loop = 0;
+	count = 1;
 
 	if (head == NULL || head->next == NULL)
 		return (0);
 
-	fast = head;
-	slow = head;
+	fast = (head->next)->next;
+	slow = head->next;
 
-
-	while (fast != NULL && fast->next != NULL)
+	while (fast != NULL)
 	{
-		fast = fast->next->next;
-		slow = slow->next;
 		if (fast == slow)
 		{
-			has_loop = 1;
-			break;
+			slow = head;
+			while (slow != fast)
+			{
+				slow = slow->next;
+				fast = fast->next;
+				count++;
+			}
+			slow = slow->next;
+			while (slow != fast)
+			{
+				slow = slow->next;
+				count++;
+			}
+			return (count);
 		}
-	}
-	if (!has_loop)
-		return (0);
-
-	slow = slow->next;
-	fast = fast->next->next;
-	count = 2;
-	while (slow != fast)
-	{
 		slow = slow->next;
-		fast = fast->next->next;
-		count++;
+		fast = (fast->next)->next;
 	}
-	count++;
-	return (count);
+	return (0);
 }
 
 /**
@@ -56,7 +54,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t nodes, i;
 	const listint_t *tmp;
 
-	nodes = uniq_nodes(head);
+	nodes = list_cycle_len(head);
 	tmp = head;
 
 	if (!nodes)
