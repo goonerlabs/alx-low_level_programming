@@ -10,7 +10,6 @@ unsigned int uniq_nodes(const listint_t *head)
 	const listint_t *fast, *slow;
 	unsigned int count, has_loop;
 
-	count = 2;
 	has_loop = 0;
 
 	if (head == NULL || head->next == NULL)
@@ -33,10 +32,16 @@ unsigned int uniq_nodes(const listint_t *head)
 	if (!has_loop)
 		return (0);
 
-	do {
+	slow = slow->next;
+	fast = fast->next->next;
+	count = 2;
+	while (slow != fast)
+	{
 		slow = slow->next;
+		fast = fast->next->next;
 		count++;
-	} while (slow != fast);
+	}
+	count++;
 	return (count);
 }
 
