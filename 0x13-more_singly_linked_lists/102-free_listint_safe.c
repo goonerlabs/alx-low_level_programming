@@ -10,7 +10,7 @@ unsigned int list_cycle_len2(listint_t *head)
 	listint_t *fast, *slow;
 	unsigned int count;
 
-	count = 1;
+	count = 0;
 
 	if (head == NULL)
 		return (0);
