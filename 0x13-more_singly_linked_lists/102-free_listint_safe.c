@@ -45,7 +45,7 @@ unsigned int list_cycle_len2(listint_t *head)
 
 /**
  * free_listint_safe - frees a listint_t list even if witha a cycle
- * @head: h of the list
+ * @h: head of the list
  * Return: size of the list
  */
 
