@@ -42,7 +42,7 @@ unsigned int uniq_nodes(const listint_t *head)
 
 /**
  * print_listint_safe - prints all elements of a list_t list safely
- * @h: head of the list
+ * @head: head of the list
  * Return: number of nodes
  */
 
