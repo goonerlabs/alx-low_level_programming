@@ -12,35 +12,31 @@ unsigned int list_cycle_len2(listint_t *head)
 
 	count = 1;
 
-	if (head == NULL || head->next == NULL)
+	if (head == NULL)
 		return (0);
 
-	fast = (head->next)->next;
-	slow = head->next;
+	fast = head;
+	slow = head;
 
-	while (fast != NULL)
+	while (fast && fast->next && slow)
 	{
+		fast = fast->next->next;
+		slow = slow->next;
+		count++;
 		if (fast == slow)
 		{
 			slow = head;
-			while (slow != fast)
+			while (fast != slow)
 			{
-				slow = slow->next;
 				fast = fast->next;
-				count++;
-			}
-			slow = slow->next;
-			while (slow != fast)
-			{
 				slow = slow->next;
 				count++;
 			}
 			return (count);
 		}
-		slow = slow->next;
-		fast = (fast->next)->next;
 	}
 	return (0);
+
 }
 
 /**

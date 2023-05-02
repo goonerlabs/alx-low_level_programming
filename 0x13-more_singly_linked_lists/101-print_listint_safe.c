@@ -10,16 +10,19 @@ unsigned int list_cycle_len(const listint_t *head)
 	const listint_t *fast, *slow;
 	unsigned int count;
 
-	count = 1;
+	count = 0;
 
-	if (head == NULL || head->next == NULL)
+	if (head == NULL)
 		return (0);
 
-	fast = (head->next)->next;
-	slow = head->next;
+	fast = head;
+	slow = head;
 
-	while (fast != NULL)
+	while (slow && fast && fast->next)
 	{
+		fast = fast->next->next;
+		slow = slow->next;
+		count++;
 		if (fast == slow)
 		{
 			slow = head;
@@ -29,18 +32,11 @@ unsigned int list_cycle_len(const listint_t *head)
 				fast = fast->next;
 				count++;
 			}
-			slow = slow->next;
-			while (slow != fast)
-			{
-				slow = slow->next;
-				count++;
-			}
 			return (count);
 		}
-		slow = slow->next;
-		fast = (fast->next)->next;
 	}
 	return (0);
+
 }
 
 /**
