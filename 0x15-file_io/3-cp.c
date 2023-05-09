@@ -34,7 +34,7 @@ void  _close(int file)
 	if (res == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
-		exit(98);
+		exit(100);
 	}
 }
 
@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 		if (dest == -1 || write_res == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Can't write to file %s\n", argv[2]);
+					"Error: Can't write to %s\n", argv[2]);
 			free(buff);
 			exit(99);
 		}
