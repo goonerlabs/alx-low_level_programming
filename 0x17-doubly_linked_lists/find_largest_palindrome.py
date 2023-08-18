@@ -10,3 +10,5 @@ for i in range(100,1000):
         if is_palindrome(x) and x > z:
             z = x;
 print(z)
+with open('102-result', 'w') as f:
+    f.write(str(z))
