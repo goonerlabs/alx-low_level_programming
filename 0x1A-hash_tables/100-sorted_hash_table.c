@@ -70,7 +70,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	}
 	new->next = ht->array[i];
 	ht->array[i] = new;
-	
+
 	if (ht->shead == NULL)
 	{
 		new->sprev = NULL;
