@@ -1,14 +1,27 @@
 #!/usr/bin/python3
+""" mesures the preimeter of an island """
+
 
 def island_perimeter(grid):
     """returns the perimeter of the island described in grid"""
-    res = 0
-    for i in range(len(grid)):
-        for j in range(len(grid[i])):
+
+    w = len(grid[0])
+    h = len(grid)
+    e = 0
+    l = 0
+
+    for i in range(h):
+        for j in range(w):
             if grid[i][j] == 1:
-                res += 4
-                if i > 0 and grid[i - 1][j] == 1:
-                    res -= 2
+                l += 1
                 if j > 0 and grid[i][j - 1] == 1:
-                    res -= 2
-    return res
+                    e += 1
+                if i > 0 and grid[i - 1][j] == 1:
+                    e += 1
+                if j < w - 1 and grid[i][j + 1] == 1:
+                    e += 1
+                if i < h - 1 and grid[i + 1][j] == 1:
+                    e += 1
+
+    return l * 4 - e
+
