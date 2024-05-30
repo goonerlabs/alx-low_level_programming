@@ -23,4 +23,4 @@ def island_perimeter(grid):
                 if i < h - 1 and grid[i + 1][j] == 1:
                     e += 1
 
-    return l * 4 - e
+    return n * 4 - e
